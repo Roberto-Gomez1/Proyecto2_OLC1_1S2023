@@ -43,7 +43,7 @@ function Home(){
             </Row>
             <Row>
                 <Col style={{ textAlign: 'left' }}>
-                    <Editor input={setEditor}/>
+                <Editor input={setEditor} value={editor} />
                 </Col>
                 
                 <Col style={{ textAlign: 'left' }}>

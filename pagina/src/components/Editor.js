@@ -5,15 +5,15 @@ import { okaidia, okaidiaInit } from '@uiw/codemirror-theme-okaidia';
 
 function Editor(props) {
   const onChange = React.useCallback((value, viewUpdate) => {
-    console.log('value:', value);
     props.input(value);
   }, []);
   return (
     <CodeMirror
-    value="console.log('hello world!');"
+    value={props.value}
     height="200px"
     theme={okaidia}
     extensions={[javascript({ jsx: true })]}
+    onChange={onChange}
   />
   );
 }
